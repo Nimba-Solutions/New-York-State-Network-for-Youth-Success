@@ -1,6 +1,8 @@
 minimum_cumulusci_version: '3.78.0'
 project:
     name: New-York-State-Network-for-Youth-Success
+    dependencies:
+        - github: https://github.com/SFDO-Community/Summit-Events-App
     package:
         name: New-York-State-Network-for-Youth-Success
         api_version: '55.0'
