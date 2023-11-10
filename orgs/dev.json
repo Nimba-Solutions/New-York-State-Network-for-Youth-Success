@@ -1,6 +1,27 @@
 {
   "orgName": "New-York-State-Network-for-Youth-Success - Dev Org",
   "edition": "Developer",
+  "features": [
+    "AccountingSubledgerGrowthEdition",
+    "IndustriesActionPlan",
+    "AnalyticsQueryService",
+    "PublicSectorAccess",
+    "Fundraising",
+    "IndustriesSalesExcellenceAddOn",
+    "IndustriesServiceExcellenceAddOn",
+    "MarketingUser",
+    "ProgramManagement",
+    "OmniStudioDesigner",
+    "OmniStudioRuntime",
+    "EnableSetPasswordInApi",
+    "PersonAccounts",
+    "NonprofitCloudCaseManagementUser",
+    "OutcomeManagement",
+    "BusinessRulesEngine",
+    "PublicSectorApplicationUsageCreditsAddOn",
+    "PublicSectorSiteTemplate",
+    "Grantmaking"
+  ],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
@@ -19,6 +40,22 @@
     },
     "languageSettings": {
       "enableTranslationWorkbench": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    },
+    "apexSettings": {
+      "enableDisableParallelApexTesting": true
+    },
+    "enhancedNotesSettings": {
+      "enableEnhancedNotes": true
+    },
+    "IndustriesSettings": {
+      "enableBenefitManagementPreference": true,
+      "enableBenefitAndGoalSharingPref": true,
+      "enableCarePlansPreference": true,
+      "enableOutcomes": true,
+      "enableGrantmaking": true
     }
   }
 }
