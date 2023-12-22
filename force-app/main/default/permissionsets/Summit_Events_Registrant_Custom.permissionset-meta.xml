@@ -32,6 +32,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.Community_Schools_101_Training_Ticket__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.Community_Schools_Conference_2024_Ticket__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>summit__Summit_Events_Registration__c.Company__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -72,12 +82,77 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.Project_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.Schools_Out_Fri_2024_Ticket__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.Schools_Out_Fri_Sat_2024_Ticket__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.Schools_Out_Saturday_2024_Ticket__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.Selected_Tickets__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.Site_Visit_Hamilton_Elementary__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.Site_Visit_Martin_Luther_2024__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.Site_Visit_Paige_Elementary__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.Site_Visit_William_C_Keane__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>summit__Summit_Events_Registration__c.Ticket_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>summit__Summit_Events_Registration__c.Type_of_funding_if_applicable__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.VIP_Dinner_2024_Ticket__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.X21_CCLC_Site_Location__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.X21_CLCC_Program_Physical_Address__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.X21st_Century_2024_Ticket__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

@@ -12,29 +12,59 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Community School&apos;s Conference</fullName>
+                <fullName>Community Schools 101 Training 2024</fullName>
                 <default>false</default>
-                <label>Community School&apos;s Conference</label>
+                <label>Community Schools 101 Training 2024</label>
             </value>
             <value>
-                <fullName>Schools Out</fullName>
+                <fullName>21st Century 2024</fullName>
                 <default>false</default>
-                <label>Schools Out</label>
+                <label>21st Century 2024</label>
             </value>
             <value>
-                <fullName>Site Visit</fullName>
+                <fullName>Community Schools Conference 2024</fullName>
                 <default>false</default>
-                <label>Site Visit</label>
+                <label>Community Schools Conference 2024</label>
             </value>
             <value>
-                <fullName>Community Schools 101 Training</fullName>
+                <fullName>Schools Out Fri/Sat 2024</fullName>
                 <default>false</default>
-                <label>Community Schools 101 Training</label>
+                <label>Schools Out Fri/Sat 2024</label>
             </value>
             <value>
-                <fullName>21st Century</fullName>
+                <fullName>Schools Out Friday 2024</fullName>
                 <default>false</default>
-                <label>21st Century</label>
+                <label>Schools Out Friday 2024</label>
+            </value>
+            <value>
+                <fullName>Schools Out Saturday 2024</fullName>
+                <default>false</default>
+                <label>Schools Out Saturday 2024</label>
+            </value>
+            <value>
+                <fullName>Site Visit: Dr. Martin Luther King Jr. Elementary Community School 2024</fullName>
+                <default>false</default>
+                <label>Site Visit: Dr. Martin Luther King Jr. Elementary Community School 2024</label>
+            </value>
+            <value>
+                <fullName>Site Visit: Hamilton Elementary Community School 2024</fullName>
+                <default>false</default>
+                <label>Site Visit: Hamilton Elementary Community School 2024</label>
+            </value>
+            <value>
+                <fullName>Site Visit: Paige Elementary Community School 2024</fullName>
+                <default>false</default>
+                <label>Site Visit: Paige Elementary Community School 2024</label>
+            </value>
+            <value>
+                <fullName>Site Visit: William C Keane Elementary Community School 2024</fullName>
+                <default>false</default>
+                <label>Site Visit: William C Keane Elementary Community School 2024</label>
+            </value>
+            <value>
+                <fullName>VIP Dinner 2024</fullName>
+                <default>false</default>
+                <label>VIP Dinner 2024</label>
             </value>
         </valueSetDefinition>
     </valueSet>
