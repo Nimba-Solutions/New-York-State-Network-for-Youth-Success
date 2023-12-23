@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Schools_Out_Fri_Sat_2024_Ticket__c</fullName>
+    <defaultValue>0</defaultValue>
     <externalId>false</externalId>
     <label>Schools Out Fri+Sat 2024 Ticket</label>
-    <precision>18</precision>
+    <precision>1</precision>
     <required>false</required>
     <scale>0</scale>
     <trackHistory>false</trackHistory>
