@@ -61,6 +61,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>summit__Summit_Events_Registration__c.FirstLastEmail__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>summit__Summit_Events_Registration__c.Funding_Description__c</field>
         <readable>true</readable>
@@ -72,12 +77,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.Main_Registration__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>summit__Summit_Events_Registration__c.Order_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>summit__Summit_Events_Registration__c.Other_Pronoun_Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.Paid__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -127,7 +142,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>summit__Summit_Events_Registration__c.Sum_Total_Due__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>summit__Summit_Events_Registration__c.Ticket_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>summit__Summit_Events_Registration__c.Total_Due__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
