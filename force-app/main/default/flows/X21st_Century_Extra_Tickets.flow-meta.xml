@@ -4,14 +4,14 @@
     <decisions>
         <name>Add_Saturday_Schools_Out</name>
         <label>Add Saturday Schools Out</label>
-        <locationX>228</locationX>
-        <locationY>582</locationY>
+        <locationX>239</locationX>
+        <locationY>462</locationY>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
             <name>Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Fetch_Existing.Schools_Out_Saturday_2024_Ticket__c</leftValueReference>
+                <leftValueReference>$Record.Schools_Out_Saturday_2024_Ticket__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <numberValue>1.0</numberValue>
@@ -24,10 +24,35 @@
         </rules>
     </decisions>
     <decisions>
+        <name>CheckHost</name>
+        <label>CheckHost</label>
+        <locationX>490</locationX>
+        <locationY>822</locationY>
+        <defaultConnector>
+            <targetReference>Create_Sat_Schools_Out_Reg_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Guest</defaultConnectorLabel>
+        <rules>
+            <name>YesHost</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.summit__New_Contact_Created__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Sat_Schools_Out_Reg</targetReference>
+            </connector>
+            <label>YesHost</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Exists</name>
         <label>Exists?</label>
-        <locationX>225</locationX>
-        <locationY>842</locationY>
+        <locationX>238</locationX>
+        <locationY>821</locationY>
         <defaultConnector>
             <targetReference>Get_Sat_Schools_Out_Instance</targetReference>
         </defaultConnector>
@@ -43,28 +68,6 @@
                 </rightValue>
             </conditions>
             <label>YesExists</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>RecordFound</name>
-        <label>RecordFound</label>
-        <locationX>233</locationX>
-        <locationY>450</locationY>
-        <defaultConnectorLabel>No</defaultConnectorLabel>
-        <rules>
-            <name>YesFound</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Fetch_Existing.Id</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Add_Saturday_Schools_Out</targetReference>
-            </connector>
-            <label>Yes</label>
         </rules>
     </decisions>
     <environments>Default</environments>
@@ -92,54 +95,57 @@
     <recordCreates>
         <name>Create_Sat_Schools_Out_Reg</name>
         <label>Create Sat Schools Out Reg</label>
-        <locationX>460</locationX>
-        <locationY>686</locationY>
+        <locationX>678</locationX>
+        <locationY>886</locationY>
+        <connector>
+            <targetReference>MarkMain</targetReference>
+        </connector>
         <inputAssignments>
             <field>Accommodations_Description__c</field>
             <value>
-                <elementReference>Fetch_Existing.Accommodations_Description__c</elementReference>
+                <elementReference>$Record.Accommodations_Description__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Accommodations_Needed__c</field>
             <value>
-                <elementReference>Fetch_Existing.Accommodations_Needed__c</elementReference>
+                <elementReference>$Record.Accommodations_Needed__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Active_Membership__c</field>
             <value>
-                <elementReference>Fetch_Existing.Active_Membership__c</elementReference>
+                <elementReference>$Record.Active_Membership__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Dietary_Restriction_Description__c</field>
             <value>
-                <elementReference>Fetch_Existing.Dietary_Restriction_Description__c</elementReference>
+                <elementReference>$Record.Dietary_Restriction_Description__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Dietary_Restriction__c</field>
             <value>
-                <elementReference>Fetch_Existing.Dietary_Restriction__c</elementReference>
+                <elementReference>$Record.Dietary_Restriction__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Funding_Description__c</field>
             <value>
-                <elementReference>Fetch_Existing.Funding_Description__c</elementReference>
+                <elementReference>$Record.Funding_Description__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Type_of_funding_if_applicable__c</field>
             <value>
-                <elementReference>Fetch_Existing.Type_of_funding_if_applicable__c</elementReference>
+                <elementReference>$Record.Type_of_funding_if_applicable__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>summit__Contact__c</field>
             <value>
-                <elementReference>Fetch_Existing.summit__Contact__r.Id</elementReference>
+                <elementReference>$Record.summit__Contact__r.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -155,81 +161,233 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>summit__Guest_Host_Status__c</field>
+            <value>
+                <stringValue>Host attending</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>summit__Registrant_City__c</field>
             <value>
-                <elementReference>Fetch_Existing.summit__Registrant_City__c</elementReference>
+                <elementReference>$Record.summit__Registrant_City__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>summit__Registrant_Country__c</field>
             <value>
-                <elementReference>Fetch_Existing.summit__Registrant_Country__c</elementReference>
+                <elementReference>$Record.summit__Registrant_Country__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>summit__Registrant_Email__c</field>
             <value>
-                <elementReference>Fetch_Existing.summit__Registrant_Email__c</elementReference>
+                <elementReference>$Record.summit__Registrant_Email__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>summit__Registrant_First_Name__c</field>
             <value>
-                <elementReference>Fetch_Existing.summit__Registrant_First_Name__c</elementReference>
+                <elementReference>$Record.summit__Registrant_First_Name__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>summit__Registrant_Last_Name__c</field>
             <value>
-                <elementReference>Fetch_Existing.summit__Registrant_Last_Name__c</elementReference>
+                <elementReference>$Record.summit__Registrant_Last_Name__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>summit__Registrant_Phone__c</field>
             <value>
-                <elementReference>Fetch_Existing.summit__Registrant_Phone__c</elementReference>
+                <elementReference>$Record.summit__Registrant_Phone__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>summit__Registrant_Preferred_First_Name__c</field>
             <value>
-                <elementReference>Fetch_Existing.summit__Registrant_Preferred_First_Name__c</elementReference>
+                <elementReference>$Record.summit__Registrant_Preferred_First_Name__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>summit__Registrant_Pronouns__c</field>
             <value>
-                <elementReference>Fetch_Existing.summit__Registrant_Pronouns__c</elementReference>
+                <elementReference>$Record.summit__Registrant_Pronouns__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>summit__Registrant_State__c</field>
             <value>
-                <elementReference>Fetch_Existing.summit__Registrant_State__c</elementReference>
+                <elementReference>$Record.summit__Registrant_State__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>summit__Registrant_Street_1__c</field>
             <value>
-                <elementReference>Fetch_Existing.summit__Registrant_Street_1__c</elementReference>
+                <elementReference>$Record.summit__Registrant_Street_1__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>summit__Registrant_Street_2__c</field>
             <value>
-                <elementReference>Fetch_Existing.summit__Registrant_Street_2__c</elementReference>
+                <elementReference>$Record.summit__Registrant_Street_2__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>summit__Registrant_Zip__c</field>
             <value>
-                <elementReference>Fetch_Existing.summit__Registrant_Zip__c</elementReference>
+                <elementReference>$Record.summit__Registrant_Zip__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>summit__Summit_Events_Registration__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Sat_Schools_Out_Reg_0</name>
+        <label>Create Sat Schools Out Reg</label>
+        <locationX>677</locationX>
+        <locationY>730</locationY>
+        <inputAssignments>
+            <field>Accommodations_Description__c</field>
+            <value>
+                <elementReference>$Record.Accommodations_Description__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>summit__Status__c</field>
+            <field>Accommodations_Needed__c</field>
             <value>
-                <stringValue>Registered</stringValue>
+                <elementReference>$Record.Accommodations_Needed__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Active_Membership__c</field>
+            <value>
+                <elementReference>$Record.Active_Membership__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Dietary_Restriction_Description__c</field>
+            <value>
+                <elementReference>$Record.Dietary_Restriction_Description__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Dietary_Restriction__c</field>
+            <value>
+                <elementReference>$Record.Dietary_Restriction__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Funding_Description__c</field>
+            <value>
+                <elementReference>$Record.Funding_Description__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type_of_funding_if_applicable__c</field>
+            <value>
+                <elementReference>$Record.Type_of_funding_if_applicable__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>summit__Contact__c</field>
+            <value>
+                <elementReference>$Record.summit__Contact__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>summit__Event_Instance__c</field>
+            <value>
+                <elementReference>Get_Sat_Schools_Out_Instance.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>summit__Event__c</field>
+            <value>
+                <elementReference>Get_Sat_Schools_Out_Instance.summit__Event__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>summit__Guest_Host_Status__c</field>
+            <value>
+                <stringValue>Hosted registrant</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>summit__Guest_Host__c</field>
+            <value>
+                <elementReference>$Record.summit__Guest_Host__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>summit__Registrant_City__c</field>
+            <value>
+                <elementReference>$Record.summit__Registrant_City__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>summit__Registrant_Country__c</field>
+            <value>
+                <elementReference>$Record.summit__Registrant_Country__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>summit__Registrant_Email__c</field>
+            <value>
+                <elementReference>$Record.summit__Registrant_Email__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>summit__Registrant_First_Name__c</field>
+            <value>
+                <elementReference>$Record.summit__Registrant_First_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>summit__Registrant_Last_Name__c</field>
+            <value>
+                <elementReference>$Record.summit__Registrant_Last_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>summit__Registrant_Phone__c</field>
+            <value>
+                <elementReference>$Record.summit__Registrant_Phone__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>summit__Registrant_Preferred_First_Name__c</field>
+            <value>
+                <elementReference>$Record.summit__Registrant_Preferred_First_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>summit__Registrant_Pronouns__c</field>
+            <value>
+                <elementReference>$Record.summit__Registrant_Pronouns__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>summit__Registrant_State__c</field>
+            <value>
+                <elementReference>$Record.summit__Registrant_State__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>summit__Registrant_Street_1__c</field>
+            <value>
+                <elementReference>$Record.summit__Registrant_Street_1__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>summit__Registrant_Street_2__c</field>
+            <value>
+                <elementReference>$Record.summit__Registrant_Street_2__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>summit__Registrant_Zip__c</field>
+            <value>
+                <elementReference>$Record.summit__Registrant_Zip__c</elementReference>
             </value>
         </inputAssignments>
         <object>summit__Summit_Events_Registration__c</object>
@@ -238,8 +396,8 @@
     <recordLookups>
         <name>CheckExisting</name>
         <label>CheckExisting</label>
-        <locationX>234</locationX>
-        <locationY>704</locationY>
+        <locationX>247</locationX>
+        <locationY>660</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Exists</targetReference>
@@ -249,7 +407,7 @@
             <field>FirstLastEmail__c</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Fetch_Existing.FirstLastEmail__c</elementReference>
+                <elementReference>$Record.FirstLastEmail__c</elementReference>
             </value>
         </filters>
         <filters>
@@ -264,41 +422,13 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
-        <name>Fetch_Existing</name>
-        <label>Fetch Existing</label>
-        <locationX>239</locationX>
-        <locationY>335</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>RecordFound</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>summit__Contact__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>summit__Event_Instance_Title__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>21st Century 2024</stringValue>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>summit__Summit_Events_Registration__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
         <name>Get_Sat_Schools_Out_Instance</name>
         <label>Get Sat Schools Out Instance</label>
-        <locationX>350</locationX>
-        <locationY>687</locationY>
+        <locationX>369</locationX>
+        <locationY>819</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Create_Sat_Schools_Out_Reg</targetReference>
+            <targetReference>CheckHost</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -312,17 +442,45 @@
         <object>summit__Summit_Events_Instance__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordUpdates>
+        <name>MarkMain</name>
+        <label>MarkMain</label>
+        <locationX>788</locationX>
+        <locationY>891</locationY>
+        <inputAssignments>
+            <field>Main_Registration__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
     <start>
-        <locationX>113</locationX>
-        <locationY>50</locationY>
+        <locationX>120</locationX>
+        <locationY>113</locationY>
         <connector>
-            <targetReference>Fetch_Existing</targetReference>
+            <targetReference>Add_Saturday_Schools_Out</targetReference>
         </connector>
-        <object>Contact</object>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>summit__Event_Instance_Title__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>21st Century 2024</stringValue>
+            </value>
+        </filters>
+        <object>summit__Summit_Events_Registration__c</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
+    <variables>
+        <name>IsNull</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
     <variables>
         <name>SatSchoolsOutEvent</name>
         <dataType>SObject</dataType>
