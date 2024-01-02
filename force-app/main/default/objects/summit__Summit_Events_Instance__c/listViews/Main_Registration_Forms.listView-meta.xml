@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Main_Registration_Forms</fullName>
+    <columns>summit__Instance_Title__c</columns>
+    <columns>NAME</columns>
+    <columns>summit__Event__c</columns>
+    <columns>summit__Capacity__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>summit__Instance_Title__c</field>
+        <operation>notContain</operation>
+        <value>Site</value>
+    </filters>
+    <filters>
+        <field>summit__Instance_Title__c</field>
+        <operation>notContain</operation>
+        <value>Fri</value>
+    </filters>
+    <filters>
+        <field>summit__Instance_Title__c</field>
+        <operation>notContain</operation>
+        <value>Sat</value>
+    </filters>
+    <filters>
+        <field>summit__Instance_Title__c</field>
+        <operation>notContain</operation>
+        <value>101</value>
+    </filters>
+    <label>Main Registration Forms</label>
+</ListView>
