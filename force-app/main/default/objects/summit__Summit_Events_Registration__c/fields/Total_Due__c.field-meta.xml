@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Due__c</fullName>
+    <externalId>false</externalId>
+    <formula>VIP_Dinner_2024_Ticket__c * 0 +
+X21st_Century_2024_Ticket__c * 0 +
+Community_Schools_101_Training_Ticket__c * 0 +
+Community_Schools_Conference_2024_Ticket__c * 250 +
+Schools_Out_Fri_Sat_2024_Ticket__c * IF(TEXT(Active_Membership__c) = &quot;Yes&quot;, 280, 300) +
+Schools_Out_Fri_2024_Ticket__c * IF(TEXT(Active_Membership__c) = &quot;Yes&quot;, 165, 185) +
+Schools_Out_Saturday_2024_Ticket__c * IF(TEXT(Active_Membership__c) = &quot;Yes&quot;, 165, 185) +
+Site_Visit_Martin_Luther_2024__c * 50 +
+Site_Visit_Hamilton_Elementary__c * 50 +
+Site_Visit_Paige_Elementary__c * 50 +
+Site_Visit_William_C_Keane__c * 50</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Due</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>
