@@ -2,6 +2,9 @@
   "orgName": "New-York-State-Network-for-Youth-Success - Dev Org",
   "edition": "Developer",
   "features": [
+    "Communities",
+    "Sites",
+    "SiteDotCom",
     "AccountingSubledgerGrowthEdition",
     "IndustriesActionPlan",
     "AnalyticsQueryService",
@@ -23,6 +26,10 @@
     "Grantmaking"
   ],
   "settings": {
+    "communitiesSettings": {
+      "enableNetworksEnabled": true,
+      "enableOotbProfExtUserOpsEnable": true
+    },
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
     },

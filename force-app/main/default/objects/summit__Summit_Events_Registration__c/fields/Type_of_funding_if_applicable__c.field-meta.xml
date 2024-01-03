@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_funding_if_applicable__c</fullName>
+    <externalId>false</externalId>
+    <label>Type of funding (if applicable)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Program Fees</fullName>
+                <default>false</default>
+                <label>Program Fees</label>
+            </value>
+            <value>
+                <fullName>Grant Funding</fullName>
+                <default>false</default>
+                <label>Grant Funding</label>
+            </value>
+            <value>
+                <fullName>City or County Funding</fullName>
+                <default>false</default>
+                <label>City or County Funding</label>
+            </value>
+            <value>
+                <fullName>School District Funding</fullName>
+                <default>false</default>
+                <label>School District Funding</label>
+            </value>
+            <value>
+                <fullName>Private Funding</fullName>
+                <default>false</default>
+                <label>Private Funding</label>
+            </value>
+            <value>
+                <fullName>Corporate Funding</fullName>
+                <default>false</default>
+                <label>Corporate Funding</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
