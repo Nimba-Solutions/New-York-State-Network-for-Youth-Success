@@ -29,7 +29,6 @@ extract:
     - BillingPostalCode
     - BillingState
     - BillingStreet
-    - CleanStatus
     - Credentialed_Certificate_No__pc
     - Credentialed_Certificate_Renewal_Date__pc
     - Description
