@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SAC_Advisor_Endorser_Serving__c</fullName>
+    <externalId>false</externalId>
+    <label>SAC Advisor/Endorser Serving:</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Capital Region</fullName>
+                <default>false</default>
+                <label>Capital Region</label>
+            </value>
+            <value>
+                <fullName>Hudson Valley</fullName>
+                <default>false</default>
+                <label>Hudson Valley</label>
+            </value>
+            <value>
+                <fullName>Utica</fullName>
+                <default>false</default>
+                <label>Utica</label>
+            </value>
+            <value>
+                <fullName>Watertown</fullName>
+                <default>false</default>
+                <label>Watertown</label>
+            </value>
+            <value>
+                <fullName>North Country</fullName>
+                <default>false</default>
+                <label>North Country</label>
+            </value>
+            <value>
+                <fullName>Syracuse</fullName>
+                <default>false</default>
+                <label>Syracuse</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ticket_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Ticket Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>21st Century - Friday Pass for CCLC Participants</fullName>
+                <default>false</default>
+                <label>21st Century - Friday Pass for CCLC Participants</label>
+            </value>
+            <value>
+                <fullName>Member Rate - Friday Only (1 day)</fullName>
+                <default>false</default>
+                <label>Member Rate - Friday Only (1 day)</label>
+            </value>
+            <value>
+                <fullName>Member Rate - Saturday Only (1 day)</fullName>
+                <default>false</default>
+                <label>Member Rate - Saturday Only (1 day)</label>
+            </value>
+            <value>
+                <fullName>Member Rate - Full Conference (2 days)</fullName>
+                <default>false</default>
+                <label>Member Rate - Full Conference (2 days)</label>
+            </value>
+            <value>
+                <fullName>Friday Only (1 day)</fullName>
+                <default>false</default>
+                <label>Friday Only (1 day)</label>
+            </value>
+            <value>
+                <fullName>Saturday Only (1 day)</fullName>
+                <default>false</default>
+                <label>Saturday Only (1 day)</label>
+            </value>
+            <value>
+                <fullName>Full Conference (2 days)</fullName>
+                <default>false</default>
+                <label>Full Conference (2 days)</label>
+            </value>
+            <value>
+                <fullName>Site Visits (Wed)</fullName>
+                <default>false</default>
+                <label>Site Visits (Wed)</label>
+            </value>
+            <value>
+                <fullName>NYS Community Schools (Thursday)</fullName>
+                <default>false</default>
+                <label>NYS Community Schools (Thursday)</label>
+            </value>
+            <value>
+                <fullName>Presenter - Free Friday Ticket</fullName>
+                <default>false</default>
+                <label>Presenter - Free Friday Ticket</label>
+            </value>
+            <value>
+                <fullName>Presenter - Free Saturday Ticket</fullName>
+                <default>false</default>
+                <label>Presenter - Free Saturday Ticket</label>
+            </value>
+            <value>
+                <fullName>VIP Dinner - Free (Wed)</fullName>
+                <default>false</default>
+                <label>VIP Dinner - Free (Wed)</label>
+            </value>
+            <value>
+                <fullName>Vendor - Free</fullName>
+                <default>false</default>
+                <label>Vendor - Free</label>
+            </value>
+            <value>
+                <fullName>Award Winner - Free</fullName>
+                <default>false</default>
+                <label>Award Winner - Free</label>
+            </value>
+            <value>
+                <fullName>Sponsor - Free</fullName>
+                <default>false</default>
+                <label>Sponsor - Free</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

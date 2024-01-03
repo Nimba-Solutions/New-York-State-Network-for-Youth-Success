@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>summit__All</fullName>
+    <columns>summit__Registrant_First_Name__c</columns>
+    <columns>summit__Registrant_Last_Name__c</columns>
+    <columns>Main_Registration__c</columns>
+    <columns>summit__Event__c</columns>
+    <columns>NAME</columns>
+    <columns>summit__Event_Instance__c</columns>
+    <columns>summit__Event_Instance_Title__c</columns>
+    <columns>summit__Contact__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>summit__Status__c</columns>
+    <columns>summit__Hosted_Registrants__c</columns>
+    <columns>summit__Total_Number_of_Guests__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>
