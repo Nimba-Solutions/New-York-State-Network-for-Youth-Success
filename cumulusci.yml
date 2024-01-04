@@ -8,7 +8,7 @@ project:
         - version_id: 04t5G000004XZhZQAW # Flow Screens Base Pack v3.2.4
     package:
         name: New-York-State-Network-for-Youth-Success
-        api_version: '55.0'
+        api_version: '59.0'
     git:
         default_branch: 'main'
         prefix_feature: 'feature/'
@@ -31,3 +31,13 @@ tasks:
     run_tests:
         options:
             required_org_code_coverage_percent: 75
+    
+    deploy_pre:
+        options:
+            path: unpackaged/pre
+            transforms:
+                - transform: find_replace
+                  options:
+                      patterns:
+                          - find: DEV_ORG_USERNAME
+                            inject_username: True
